@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - practice
+    paths:
       - "docs/**"
 
 jobs:
