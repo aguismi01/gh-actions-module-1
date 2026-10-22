@@ -2,7 +2,9 @@ name: Practice Module 01 Automate development tasks
 
 on:
   push:
-    branches: [practice]
+    branches:
+      - practice
+      - "docs/**"
 
 jobs:
   inspect:
