@@ -1,0 +1,15 @@
+name: Practice 01 Bascis of GH-01
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display Event name
+        run: echo {{ github.event_name }}
+
+      - name: Display Activity type
+        run: echo {{ github.event }}
