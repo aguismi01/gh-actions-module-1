@@ -1,0 +1,14 @@
+name: Practice Module 01 Automate development tasks
+
+on:
+  push
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display Hello
+        run: echo "Hello from GitHub Actions"
+
+      - name: Display current time
+        run: uptime
