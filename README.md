@@ -1,1 +1,1 @@
-# gh-actions-module-01 - Practice
+# GH-200 preparation - Module 01 - Automate development tasks
