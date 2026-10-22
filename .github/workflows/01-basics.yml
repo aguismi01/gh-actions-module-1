@@ -1,0 +1,21 @@
+name: Practice Module 01 Automate development tasks
+
+on:
+  push:
+    branches: [practice]
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: List files
+        run: ls -la
+
+      - name: Display Hello
+        run: echo "Hello from GitHub Actions"
+
+      - name: Display current time
+        run: uptime
