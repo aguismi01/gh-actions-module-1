@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Display Event name
-        run: echo {{ github.event_name }}
+        run: echo ${{ github.event_name }}
 
       - name: Display Activity type
-        run: echo {{ github.event }}
+        run: echo ${{ github.event }}
