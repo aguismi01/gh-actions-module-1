@@ -3,13 +3,21 @@ name: Basics GH-M01
 on:
   push:
     branches: [practice]
+    paths:
+      - "docs/**"
     
 
 jobs:
   inspect:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - run: ls -la
-      - run: echo "Hello from GitHub Actions"
-      - run: uptime
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: List repo files
+        run: ls -la
+
+      - name: Display hello msg
+        run: echo "Hello from GitHub Actions"
+
+      - name: Display uptime
+        run: uptime
