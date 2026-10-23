@@ -1,6 +1,8 @@
 name: 03-Manual
 
 on:
+  push:
+    
   workflow_dispatch:
     inputs:
       environment:
@@ -15,4 +17,12 @@ jobs:
   inspect:
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${{ github.event.inputs.environment }} 
+      - name: display event name and ref
+        env:
+          GITHUB_REF: ${{ github.ref }}
+        run: |
+          echo Event name : ${{ github.event_name }}
+          echo Ref : "$GITHUB_REF"
+
+      - name: display event inputs
+        run: echo ${{ github.event.inputs.environment }} 
