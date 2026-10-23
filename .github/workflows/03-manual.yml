@@ -25,9 +25,9 @@ jobs:
           echo Ref : "$GITHUB_REF"
 
       - name: Run only on push
-        if: ${{ github.ref == 'push' }}
+        if: ${{ github.event_name == 'push' }}
         run: echo "this is a push event"
 
       - name: display event inputs only on manual workflow
-        if: ${{ github.ref == 'workflow_dispatch' }}
+        if: ${{ github.event_name == 'workflow_dispatch' }}
         run: echo ${{ github.event.inputs.environment }} 
