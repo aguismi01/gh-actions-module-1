@@ -18,10 +18,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: display event name and ref
-        env:
-          GITHUB_REF: ${{ github.ref }}
         run: |
-          echo Event name : ${{ github.event_name }}
+          echo Event name : $GITHUB_REF_NAME
           echo Ref : "$GITHUB_REF"
 
       - name: Run only on push
