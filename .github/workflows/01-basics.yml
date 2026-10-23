@@ -1,11 +1,15 @@
 name: Basics GH-M01
 
 on:
-  push
+  push:
+    branches: [practice]
+    
 
 jobs:
   inspect:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+      - run: ls -la
       - run: echo "Hello from GitHub Actions"
       - run: uptime
