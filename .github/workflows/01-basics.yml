@@ -1,0 +1,11 @@
+name: Basics GH-M01
+
+on:
+  push
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello from GitHub Actions"
+      - run: uptime
