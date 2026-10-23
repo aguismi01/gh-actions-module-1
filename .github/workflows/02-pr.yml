@@ -7,4 +7,8 @@ jobs:
   inspect:
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${{ toJson(github) }}
+      - name: Display Event name
+        run: echo ${{ github.event_name }}
+      
+      - name: Display Activity name
+        run: echo ${{ github.event.action }}
