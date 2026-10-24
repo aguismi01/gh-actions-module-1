@@ -1,0 +1,20 @@
+name: 01-docs-filter workflow
+
+on:
+  push:
+    branches: [practice]
+    paths:
+      - "docs/**"
+    
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display Event name
+        run: echo $GITHUB_EVENT_NAME
+
+      - name: Display Git Ref
+        run: echo $GITHUB_REF
+
+      - name: Display repository name
+        run: echo $GITHUB_REPOSITORY
