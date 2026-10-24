@@ -10,4 +10,11 @@ jobs:
   inspect:
     runs-on: ubuntu-latest
     steps:
-      - run: echo $GITHUB_REF
+      - name: Display Event name
+        run: echo $GITHUB_EVENT_NAME
+
+      - name: Display Git Ref
+        run: echo $GITHUB_REF
+
+      - name: Display repository name
+        run: echo $GITHUB_REPOSITORY
