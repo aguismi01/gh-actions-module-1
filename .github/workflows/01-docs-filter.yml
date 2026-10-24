@@ -1,0 +1,12 @@
+name: 01-docs-filter workflow
+
+on:
+  push:
+    paths:
+      - "docs/**"
+    
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo $GITHUB_REF
