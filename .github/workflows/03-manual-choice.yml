@@ -1,0 +1,20 @@
+name: Manual workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        required: true
+        type: choice
+        options:
+          - dev
+          - staging
+      
+      
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: display user input
+        run: echo ${{ inputs.target }}
