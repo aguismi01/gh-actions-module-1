@@ -2,6 +2,7 @@ name: 01-docs-filter workflow
 
 on:
   push:
+    branches: [practice]
     paths:
       - "docs/**"
     
