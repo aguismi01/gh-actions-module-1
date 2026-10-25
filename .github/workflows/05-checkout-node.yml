@@ -1,0 +1,16 @@
+name: Checkout and Setup Node.js
+
+on:
+  push:
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+      
+      - run: node --version

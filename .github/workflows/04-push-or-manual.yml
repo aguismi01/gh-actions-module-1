@@ -1,4 +1,4 @@
-name: 04-push-or-manual.yml
+name: 04-push-or-manual
 
 on:
   push:
