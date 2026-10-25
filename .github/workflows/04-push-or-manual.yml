@@ -1,0 +1,20 @@
+name: 04-push-or-manual.yml
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  inpsect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display Event name
+        run: echo $GITHUB_EVENT_NAME
+      
+      - name: This is only for push
+        if: ${{ github.event_name == 'push' }}
+        run: echo "This is only for push event"
+
+      - name: This is only for workflow dispatch
+        if: ${{ github.event_name == 'workflow_dispatch' }}
+        run: echo "This is only for workflow dispatch event"
